@@ -9,6 +9,7 @@ public class Vetores {
 		int vetor3[] = new int[6]; //vetor sem dados, informando apenas o tamanho
 		int [] vetor4 = new int [6]; // vetor sem dados 2, informando apenas o tamanho
 	
+		leia.close(); // limpa o cache
 	}
 
 }

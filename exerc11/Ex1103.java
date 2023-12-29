@@ -11,21 +11,29 @@ public class Ex1103 {
 		//diagonal principal: (0,0),(1,1),(2,2)
 		//diagonal secundária (0,2),(1,1),(2,0)
 		
-		int matrizInt[][] = { { 1,2,3 }, { 4,5,6 }, { 7,8,9 } };
+		int matriz[][] = { { 1,2,3 }, { 4,5,6 }, { 7,8,9 } }, soma1=0, soma2 = 0;
 
-        /*for (int indiceLinha = 0; indiceLinha < 3; indiceLinha++) {
-            for (int indiceColuna = 0; indiceColuna < 3; indiceColuna++) {
-                System.out.println(
-                    "O valor armazenado na posição [" + indiceLinha + "][" + indiceColuna + "] é: " 
-                + matrizInteiros[indiceLinha][indiceColuna]);
-            }}*/
-		
-		
-		System.out.println("Elementos na diagonal principal: "+matrizInt[0][0]+" "+matrizInt[1][1]+" "+matrizInt[2][2]);
-		System.out.println("Elementos na diagonal secundária: "+matrizInt[0][2]+" "+matrizInt[1][1]+" "+matrizInt[2][0]);
-		System.out.println("Soma dos elementos na diagonal principal: "+matrizInt[0][0]+matrizInt[1][1]+matrizInt[2][2]);
-		System.out.println("Soma de elementos na diagonal secundária: "+matrizInt[0][2]+" "+matrizInt[1][1]+" "+matrizInt[2][0]);
-
+		System.out.print("Elementos na diagonal principal: ");
+		for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+            	if (i == j) {       	
+            		System.out.print(matriz[i][j] + " ");
+            		soma1 += matriz[i][j];}
+                   
+            }}
+		System.out.println();
+		System.out.print("Elementos na diagonal secundária: ");
+		for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+            	if (i + j == 2) {       	
+            		System.out.print(matriz[i][j] + " ");
+            		soma2 += matriz[i][j];}
+            	
+            }}
+              
+		System.out.println();
+		System.out.println("Soma dos elementos na diagonal principal: "+soma1);
+		System.out.println("Soma de elementos na diagonal secundária: "+soma2);
 	        
 	}
 
